@@ -6,7 +6,7 @@ int previousTime = 0;
 int countdownInterval = 1000; // 1 second 
 
 void setup() {
-  size(400, 400);
+  size(400, 800);
   initializeNumberPad();
   textAlign(CENTER, CENTER);
   textSize(32);
@@ -78,13 +78,15 @@ void drawNumberPad() {
 
   // numbers entered display
   fill(0);
-  text("Timer Set to: " + currentNumber, width / 2, height - 20);
+  text("Set Timer to: " + currentNumber, width / 2, height * 0.9);
 }
 
 void drawTimer() {
   fill(0);
-  textSize(24);
-  text("Timer: " + timer, width / 2, 30);
+  textSize(width/height * 20);
+  text("Timer", width / 2, height * 0.05);
+  text(timer, width / 2, height * 0.15);
+
 }
 
 void checkButtonClick() {
